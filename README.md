@@ -24,3 +24,8 @@ This is a program which simulate shopping mall.
 - you will get a prompt which remind you to recharge or quit when your money is less than the total price of the products you want to buy.
 - you can buy your products when the money in your account is more than the total price of the products you want to buy.
 
+backend_update.py
+This is a program for backend updating.
+- user should input the update contents
+- the update contents must be like "{"backend": "test.oldboy.org","record": {"server": "100.1.7.999","weight": 20,"maxconn": 30}}".
+- this program will find appropriate position to insert the update contents.
