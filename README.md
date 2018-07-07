@@ -29,3 +29,7 @@ This is a program for backend updating.
 - user should input the update contents
 - the update contents must be like "{"backend": "test.oldboy.org","record": {"server": "100.1.7.999","weight": 20,"maxconn": 30}}".
 - this program will find appropriate position to insert the update contents.
+
+calculate.py
+This a a program for calculate a string formula
+- a string formula like '1-2*(60-30+(-40/5)*(9-2*5/3+7/3*99/4*2998+10*568/14))-(-4*3)/(16-3*2)'
