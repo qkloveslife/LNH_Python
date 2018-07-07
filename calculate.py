@@ -6,9 +6,6 @@
 '''
 
 def calc(formula):
-    # 用于标记负号出现的次数，这个负号是出现在“*()”或者“/()”的括号中的结果
-    # 比如 *(-1) 则 sign 加 1 然后将 -1 变成 1，否则不加
-    sign = 0
 
     # 用来存放 formula 中的字符
     list10 = []
@@ -58,18 +55,14 @@ def calc(formula):
                             change = True
                     # 如果没有找到“+”或“-”就将标志位加 1 ，后面根据 sign 判断整体结果的符号
                     if change == False:
-                        sign += 1
-                        # list10.append(result)
+                        list10[0] = '-'+list10[0]
                 # 将结果存放到原列表中起到替代原括号内容的效果
                 list10.append(str(abs(float(result))))
             # 如果结果为正则不做处理直接加入元列表起到替代原括号内容的效果
             else:
                 list10.append(result)
-    # 根据 sign 来判断结果最终的符号
-    if sign % 2 != 0:
-        return abs(float(calc_short(''.join(list10))))
-    else:
-        return calc_short(''.join(list10))
+
+    return calc_short(''.join(list10))
 
 
 
